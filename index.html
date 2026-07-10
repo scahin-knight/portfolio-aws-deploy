@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sachin - Cloud & DevOps Engineer | AI Enthusiast">
+    <title>Sachin | DevOps & AI Engineering Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+</head>
+<body class="dark-mode">
+    
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <span class="loader-logo">S<span class="accent-text">.</span></span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">Sachin<span class="accent-text">.</span></a>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon dark-icon"></i>
+                    <i class="fas fa-sun light-icon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="section hero">
+        <!-- Background elements -->
+        <div class="hero-bg-glow glow-1"></div>
+        <div class="hero-bg-glow glow-2"></div>
+        <div id="particles-container"></div>
+        
+        <div class="container hero-content">
+            <div class="hero-image-container fade-in">
+                <div class="profile-glow"></div>
+                <!-- Placeholder for profile image, add actual image in assets/images/profile.jpg -->
+                <div class="profile-img-placeholder">
+                    <span>S</span>
+                </div>
+            </div>
+            
+            <h1 class="hero-title fade-in delay-1">Hi, I'm <span class="gradient-text">Sachin</span></h1>
+            <h2 class="hero-subtitle fade-in delay-2">
+                I am a <span id="typing-text" class="typing-text"></span><span class="cursor">|</span>
+            </h2>
+            
+            <p class="hero-desc fade-in delay-3">
+                Electronics & Communication Engineering Student bridging the gap between cutting-edge AI technologies and robust Cloud/DevOps infrastructure.
+            </p>
+            
+            <div class="hero-cta fade-in delay-4">
+                <a href="assets/resume.pdf" class="btn btn-primary btn-glow" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+                <a href="#contact" class="btn btn-secondary glass-btn">
+                    Contact Me
+                </a>
+            </div>
+            
+            <div class="social-icons fade-in delay-5">
+                <a href="https://github.com/sachin2008" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/sachin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:sachin@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title slide-up">About <span class="accent-text">Me</span></h2>
+            
+            <div class="about-grid">
+                <div class="glass-card about-content slide-right">
+                    <p>I am a passionate <strong>Electronics & Communication Engineering student</strong> at SRM Institute of Science and Technology (Kattankulathur), currently focusing on DevOps, Cloud Infrastructure, and AI Engineering.</p>
+                    <p>My current learning trajectory heavily emphasizes <strong>DevOps automation, Kubernetes, and Terraform</strong>, alongside exploring advanced AI paradigms like <strong>LangChain, RAG, and LLMs</strong>. My objective is to architect resilient, scalable cloud systems that seamlessly integrate AI capabilities.</p>
+                    <p>Looking ahead, I am targeting roles at innovative companies like Ericsson, Nokia, and major cloud providers, where I can contribute to infrastructure automation and AI integration while continuing my growth.</p>
+                </div>
+                
+                <div class="glass-card about-stats slide-left">
+                    <div class="stat-item">
+                        <i class="fas fa-graduation-cap stat-icon"></i>
+                        <div class="stat-info">
+                            <h3>Education</h3>
+                            <p>BTech ECE, SRM IST (Sem 1-2)</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-bullseye stat-icon"></i>
+                        <div class="stat-info">
+                            <h3>Focus</h3>
+                            <p>DevOps, Cloud, AI/ML</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-code-branch stat-icon"></i>
+                        <div class="stat-info">
+                            <h3>Interests</h3>
+                            <p>Open Source, Infrastructure Automation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title slide-up">Technical <span class="accent-text">Skills</span></h2>
+            
+            <div class="skills-container">
+                <!-- DevOps & Cloud -->
+                <div class="glass-card skill-category slide-up">
+                    <h3 class="category-title"><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Docker</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Kubernetes</span><span>75%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Terraform</span><span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>AWS</span><span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Ansible</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Linux/Bash</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="glass-card skill-category slide-up delay-1">
+                    <h3 class="category-title"><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Python</span><span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Bash/Shell</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>JavaScript</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>SQL</span><span>65%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="glass-card skill-category slide-up delay-2">
+                    <h3 class="category-title"><i class="fas fa-brain"></i> AI & ML</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>LangChain</span><span>75%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Groq API</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>LLMs & RAG</span><span>75%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Python ML Libraries</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Web Frontend -->
+                <div class="glass-card skill-category slide-up">
+                    <h3 class="category-title"><i class="fas fa-laptop-code"></i> Web Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>HTML5 / CSS3</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>JavaScript</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Next.js</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>React</span><span>65%</span></div>
+                        <div class="progress-bar"><div class="progress" data-width="65%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title slide-up">Featured <span class="accent-text">Projects</span></h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="glass-card project-card slide-up">
+                    <div class="project-content">
+                        <div class="project-status completed">Completed</div>
+                        <h3 class="project-title">Local Kubernetes Cluster</h3>
+                        <p class="project-desc">Established a production-like Kubernetes cluster using minikube on Windows 11 with Docker Desktop. Troubleshot kubeconfig issues and stale cluster state.</p>
+                        <div class="project-tech">
+                            <span>Kubernetes</span><span>Docker</span><span>minikube</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card project-card slide-up delay-1">
+                    <div class="project-content">
+                        <div class="project-status completed">Completed</div>
+                        <h3 class="project-title">AWS Infra with Terraform</h3>
+                        <p class="project-desc">Provisioned AWS EC2 instances, security groups, and networking infrastructure using IaC. Managed state files and credentials securely.</p>
+                        <div class="project-tech">
+                            <span>Terraform</span><span>AWS</span><span>EC2</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card project-card slide-up delay-2">
+                    <div class="project-content">
+                        <div class="project-status completed">Completed</div>
+                        <h3 class="project-title">Ansible Automation Playbooks</h3>
+                        <p class="project-desc">Created automation playbooks for master-node SSH configuration and system administration tasks. Established passwordless authentication.</p>
+                        <div class="project-tech">
+                            <span>Ansible</span><span>SSH</span><span>Linux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="glass-card project-card slide-up">
+                    <div class="project-content">
+                        <div class="project-status completed">Completed</div>
+                        <h3 class="project-title">AWS Resource Tracker</h3>
+                        <p class="project-desc">Built bash scripts to track and monitor AWS resources (EC2, S3, IAM). Automated resource discovery and reporting.</p>
+                        <div class="project-tech">
+                            <span>Bash</span><span>AWS CLI</span><span>Linux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="glass-card project-card slide-up delay-1">
+                    <div class="project-content">
+                        <div class="project-status in-progress">In Progress</div>
+                        <h3 class="project-title">RAG Chatbot with LangChain</h3>
+                        <p class="project-desc">Developing a RAG chatbot using LangChain and Groq API. Implementing vector embeddings and semantic search.</p>
+                        <div class="project-tech">
+                            <span>LangChain</span><span>Groq</span><span>Python</span><span>LLMs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="glass-card project-card slide-up delay-2">
+                    <div class="project-content">
+                        <div class="project-status completed">Completed</div>
+                        <h3 class="project-title">Docker Multi-Container App</h3>
+                        <p class="project-desc">Built a full-stack application with Docker Compose managing multiple services. Implemented networking and volume management.</p>
+                        <div class="project-tech">
+                            <span>Docker</span><span>Compose</span><span>Linux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="glass-card project-card slide-up">
+                    <div class="project-content">
+                        <div class="project-status in-progress">In Progress</div>
+                        <h3 class="project-title">CI/CD Pipeline with Jenkins</h3>
+                        <p class="project-desc">Setting up automated deployment pipeline using Jenkins, Docker, and Kubernetes for CI/CD.</p>
+                        <div class="project-tech">
+                            <span>Jenkins</span><span>Docker</span><span>K8s</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="glass-card project-card slide-up delay-1">
+                    <div class="project-content">
+                        <div class="project-status completed">Completed</div>
+                        <h3 class="project-title">Node Health Checker</h3>
+                        <p class="project-desc">Automated monitoring script for EC2 instances tracking CPU, memory, disk usage, generating health reports.</p>
+                        <div class="project-tech">
+                            <span>Bash</span><span>Python</span><span>AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Timeline Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title slide-up">My <span class="accent-text">Journey</span></h2>
+            
+            <div class="timeline">
+                <div class="timeline-item slide-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date">Current</div>
+                        <h3 class="timeline-title">Self-Learning DevOps & AI Engineering</h3>
+                        <p class="timeline-desc">Following comprehensive DevOps curriculums, learning LangChain/RAG with Groq API, and building hands-on projects with Kubernetes, Terraform, and AWS.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item slide-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date">2024</div>
+                        <h3 class="timeline-title">AWS & Cloud Learning Journey</h3>
+                        <p class="timeline-desc">Completed AWS fundamentals, built multiple infrastructure projects, and gained practical experience in IAM, EC2, networking, and automation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item slide-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-date">2023</div>
+                        <h3 class="timeline-title">Backend & Linux Exploration</h3>
+                        <p class="timeline-desc">Learned bash scripting, achieved Git and GitHub proficiency, and started my foundational journey into cloud computing and backend systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Highlights (Certifications, Achievements, GitHub Stats) -->
+    <section id="highlights" class="section highlights">
+        <div class="container">
+            <div class="highlights-grid">
+                
+                <!-- Certifications -->
+                <div class="highlight-column slide-right">
+                    <h3 class="column-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="glass-card list-card">
+                        <ul>
+                            <li><i class="fas fa-check-circle text-success"></i> <strong>LLM Security Professional (CLLMSP)</strong> - Certified</li>
+                            <li><i class="fas fa-spinner fa-spin text-warning"></i> <strong>AWS Certified Cloud Practitioner</strong> - In Progress</li>
+                            <li><i class="fas fa-clock text-info"></i> <strong>Docker & Kubernetes</strong> - Planned</li>
+                            <li><i class="fas fa-clock text-info"></i> <strong>Terraform Associate</strong> - Planned</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GitHub Stats -->
+                <div class="highlight-column slide-left">
+                    <h3 class="column-title"><i class="fab fa-github"></i> GitHub Stats</h3>
+                    <div class="glass-card stats-card" id="github-stats">
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="25">0</span>
+                            <span class="stat-label">Repositories</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="150">0</span>
+                            <span class="stat-label">Stars</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="45">0</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="350">0</span>
+                            <span class="stat-label">Contributions</span>
+                        </div>
+                    </div>
+                    <p class="stat-note">*Connect to GitHub API for live stats</p>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievements-section slide-up">
+                <h3 class="column-title text-center" style="margin-top: 3rem;"><i class="fas fa-trophy"></i> Key Achievements</h3>
+                <div class="achievements-grid">
+                    <div class="glass-card achievement-card">
+                        <div class="achievement-icon">🏆</div>
+                        <h4>Certified LLM Security Pro</h4>
+                        <p>Completed advanced LLM security certification.</p>
+                    </div>
+                    <div class="glass-card achievement-card">
+                        <div class="achievement-icon">☁️</div>
+                        <h4>AWS Infrastructure Mastery</h4>
+                        <p>Provisioned scalable infrastructure with Terraform & AWS.</p>
+                    </div>
+                    <div class="glass-card achievement-card">
+                        <div class="achievement-icon">🚀</div>
+                        <h4>Kubernetes Orchestration</h4>
+                        <p>Managed clusters and deployed multi-container apps.</p>
+                    </div>
+                    <div class="glass-card achievement-card">
+                        <div class="achievement-icon">🤖</div>
+                        <h4>AI/LLM Integration</h4>
+                        <p>Built semantic search RAG applications with LangChain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title slide-up">Get In <span class="accent-text">Touch</span></h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info glass-card slide-right">
+                    <h3>Let's Connect!</h3>
+                    <p>Open for internships, freelance DevOps/AI work, and exciting collaborations. Drop a message below!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:sachin@example.com">sachin@example.com</a>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Chennai, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/sachin" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/sachin2008" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="mailto:sachin@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container glass-card slide-left">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project Collaboration">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Hello Sachin, I'd like to discuss..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="logo">Sachin<span class="accent-text">.</span></a>
+                <p>DevOps & AI Engineer based in Chennai.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Sachin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor (Optional) -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
