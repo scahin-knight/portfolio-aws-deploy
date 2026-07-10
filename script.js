@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // ==========================================
     // Preloader
     // ==========================================
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-    
+
     // Check local storage for theme preference
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'light') {
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function typeEffect() {
         const currentRole = roles[roleIndex];
-        
+
         if (isDeleting) {
             typingText.textContent = currentRole.substring(0, charIndex - 1);
             charIndex--;
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
-                
+
                 // Animate skill progress bars if visible
                 if (entry.target.classList.contains('skill-category')) {
                     const progressBars = entry.target.querySelectorAll('.progress');
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         bar.style.width = bar.getAttribute('data-width');
                     });
                 }
-                
+
                 // Animate numbers for GitHub stats
                 if (entry.target.id === 'github-stats') {
                     const statNumbers = entry.target.querySelectorAll('.stat-number');
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const duration = 2000;
                         const increment = target / (duration / 16); // 60fps
                         let current = 0;
-                        
+
                         const updateCounter = () => {
                             current += increment;
                             if (current < target) {
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         updateCounter();
                     });
                 }
-                
+
                 observer.unobserve(entry.target);
             }
         });
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Observe specific sections for specific triggers
     const skillsSections = document.querySelectorAll('.skill-category');
     skillsSections.forEach(el => observer.observe(el));
-    
+
     const githubStats = document.getElementById('github-stats');
     if (githubStats) observer.observe(githubStats);
 
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Active Nav Link updating on Scroll
     // ==========================================
     const sections = document.querySelectorAll('section, header');
-    
+
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
@@ -240,28 +240,58 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Simple validation simulation
+
             const btn = contactForm.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            
+
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             btn.disabled = true;
 
-            // Simulate API call
-            setTimeout(() => {
-                contactForm.reset();
-                formMessage.textContent = 'Message sent successfully! I will get back to you soon.';
-                formMessage.className = 'form-message success';
-                
-                btn.innerHTML = originalText;
-                btn.disabled = false;
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
 
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    formMessage.style.display = 'none';
-                }, 5000);
-            }, 1500);
+            // Send email using FormSubmit AJAX API
+            fetch("https://formsubmit.co/ajax/sachinknight@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message,
+                    _subject: "New Portfolio Contact: " + subject // Customize email subject
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    contactForm.reset();
+                    formMessage.innerHTML = 'Message sent successfully! <br><small><i>(Note: Check your email for an activation link from FormSubmit if this is the first time)</i></small>';
+                    formMessage.style.display = 'block';
+                    formMessage.className = 'form-message success';
+
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+
+                    // Hide message after 8 seconds
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 8000);
+                })
+                .catch(error => {
+                    console.log(error);
+                    formMessage.textContent = 'Oops! Something went wrong.';
+                    formMessage.style.display = 'block';
+                    formMessage.className = 'form-message error';
+
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
         });
     }
 
@@ -269,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Back to Top Button
     // ==========================================
     const backToTopBtn = document.getElementById('back-to-top');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 500) {
             backToTopBtn.classList.add('visible');
